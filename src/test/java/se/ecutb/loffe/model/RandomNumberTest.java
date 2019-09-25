@@ -20,4 +20,6 @@ public class RandomNumberTest {
         Assert.assertTrue(result >= 0 || result <= 9);
     }
 
+
+
 }

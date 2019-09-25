@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import static se.ecutb.loffe.model.RandomNumber.random;
+
 public class NameService {
 
     public List<String> maleFirstName() {
@@ -50,4 +52,17 @@ public class NameService {
         }
         return names;
     }
+
+    public String getRandomMaleName(){
+        return maleFirstName().get(random(maleFirstName().size()));
+    }
+
+    public String getRandomFemaleName(){
+        return femaleFirstName().get(random(femaleFirstName().size()));
+    }
+
+    public String getRandomLastName(){
+        return lastName().get(random(lastName().size()));
+    }
+
 }

@@ -34,4 +34,29 @@ public class NameServiceTest {
         Assert.assertEquals(expected, result.size());
     }
 
+    @Test
+    public void get_random_male_name(){
+        NameService testObject = new NameService();
+        String result = testObject.getRandomMaleName();
+
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void get_random_female_name(){
+        NameService testObject = new NameService();
+        String result = testObject.getRandomFemaleName();
+
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void get_random_last_name(){
+        NameService testObject = new NameService();
+        String result = testObject.getRandomLastName();
+
+        Assert.assertNotNull(result);
+    }
+
+
 }
