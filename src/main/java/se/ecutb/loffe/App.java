@@ -12,6 +12,9 @@ public class App
     {
         NameService nameService = new NameService();
 
-        nameService.printList();
+        System.out.println(nameService.getFemaleFirstAndLastName());
+
+        System.out.println(nameService.getMaleFirstAndLastName());
+
     }
 }

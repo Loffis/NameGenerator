@@ -1,7 +1,5 @@
 package se.ecutb.loffe.data;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -70,6 +68,15 @@ public class NameService {
         return lastName().get(random(lastName().size()));
     }
 
+
+    public String getFemaleFirstAndLastName() {
+        return getRandomFemaleName() + " " + getRandomLastName();
+    }
+
+    public String getMaleFirstAndLastName() {
+        return getRandomMaleName() + " " + getRandomLastName();
+    }
+
     public List<String> getMultipleRandomNames(int numberOfNames){
         List<String> nameList = new ArrayList<>();
         for (int i = 0; i < numberOfNames; i++) {
@@ -81,6 +88,11 @@ public class NameService {
         }
         return nameList;
     }
+
+
+
+
+
 
     public void printList(){
         System.out.print("Enter number of names: ");
