@@ -1,15 +1,20 @@
 package se.ecutb.loffe.data;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import static se.ecutb.loffe.model.RandomNumber.random;
 
 public class NameService {
+
+    static Scanner SCAN = new Scanner(System.in);
 
     public List<String> maleFirstName() {
         List<String> names = new ArrayList<>();
@@ -64,5 +69,42 @@ public class NameService {
     public String getRandomLastName(){
         return lastName().get(random(lastName().size()));
     }
+
+    public List<String> getMultipleRandomNames(int numberOfNames){
+        List<String> nameList = new ArrayList<>();
+        for (int i = 0; i < numberOfNames; i++) {
+            if (random(2) == 0){
+                nameList.add(getRandomMaleName());
+            }else {
+                nameList.add(getRandomFemaleName());
+            }
+        }
+        return nameList;
+    }
+
+    public void printList(){
+        System.out.print("Enter number of names: ");
+        System.out.println(getMultipleRandomNames(getValidInt()));
+    }
+
+    public static String getString(){
+        return SCAN.nextLine();
+    }
+
+    public int getValidInt() {
+        boolean valid = false;
+        int number = 0;
+        while (!valid) {
+            try {
+                number = Integer.parseInt(getString());
+                valid = true;
+            } catch (NumberFormatException exception) {
+                System.out.println("Please enter a number.");
+                return number;
+            }
+        }
+        return number;
+    }
+
 
 }

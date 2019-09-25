@@ -58,5 +58,15 @@ public class NameServiceTest {
         Assert.assertNotNull(result);
     }
 
+    @Test
+    public void get_multiple_random_names(){
+        NameService testObject = new NameService();
+        int numberOfNames = 2;
+
+        Assert.assertNotNull(testObject.getMultipleRandomNames(numberOfNames));
+        Assert.assertEquals(numberOfNames, testObject.getMultipleRandomNames(numberOfNames).size());
+    }
+
+
 
 }
