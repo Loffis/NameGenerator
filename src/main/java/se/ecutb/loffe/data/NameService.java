@@ -70,11 +70,23 @@ public class NameService {
 
 
     public String getFemaleFirstAndLastName() {
-        return getRandomFemaleName() + " " + getRandomLastName();
+        return getRandomFemaleName().trim() + " " + getRandomLastName();
     }
 
     public String getMaleFirstAndLastName() {
-        return getRandomMaleName() + " " + getRandomLastName();
+        return getRandomMaleName().trim() + " " + getRandomLastName();
+    }
+
+    public String getRandomMaleOrFemaleFirstAndLastName(int gender){
+        if (gender > 1){
+            gender = random(2);
+        }
+
+        if (gender == 0){
+            return getRandomMaleName().trim() + " " + getRandomLastName();
+        }else {
+            return getRandomFemaleName().trim() + " " + getRandomLastName();
+        }
     }
 
     public List<String> getMultipleRandomNames(int numberOfNames){
@@ -88,7 +100,6 @@ public class NameService {
         }
         return nameList;
     }
-
 
 
 

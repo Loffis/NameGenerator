@@ -12,9 +12,10 @@ public class App
     {
         NameService nameService = new NameService();
 
-        System.out.println(nameService.getFemaleFirstAndLastName());
+        System.out.println(nameService.getRandomMaleOrFemaleFirstAndLastName(0));
+        System.out.println(nameService.getRandomMaleOrFemaleFirstAndLastName(1));
+        System.out.println(nameService.getRandomMaleOrFemaleFirstAndLastName(9));
 
-        System.out.println(nameService.getMaleFirstAndLastName());
 
     }
 }

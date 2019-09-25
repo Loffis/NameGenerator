@@ -82,6 +82,18 @@ public class NameServiceTest {
 
     }
 
+    @Test
+    public void get_random_female_or_male_first_and_last_name(){
+        // gender = 0 ger kille
+        // gender = 1 ger tjej
+        // gender > 1 ger random
+
+        Assert.assertNotNull(testObject.getRandomMaleOrFemaleFirstAndLastName(0));
+        Assert.assertNotNull(testObject.getRandomMaleOrFemaleFirstAndLastName(1));
+        Assert.assertNotNull(testObject.getRandomMaleOrFemaleFirstAndLastName(9));
+
+    }
+
 
 
 }
