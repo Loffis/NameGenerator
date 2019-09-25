@@ -94,6 +94,29 @@ public class NameServiceTest {
 
     }
 
+    @Test
+    public void get_multiple_random_male_first_name_with_fixed_last_name(){
+        int amountOfNames = 3;
+        int expected = 3;
+        String lastname = "Jsson";
+
+        Assert.assertEquals(expected,
+                testObject.getMultipleRandomMaleNamesWithFixedLastName(lastname, amountOfNames).size());
+
+    }
+
+    @Test
+    public void get_multiple_random_female_first_name_with_fixed_last_name(){
+        int amountOfNames = 3;
+        int expected = 3;
+        String lastname = "Jsson";
+
+        Assert.assertEquals(expected,
+                testObject.getMultipleRandomFemaleNamesWithFixedLastName(lastname, amountOfNames).size());
+
+    }
+
+
 
 
 }

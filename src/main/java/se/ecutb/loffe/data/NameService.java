@@ -89,6 +89,23 @@ public class NameService {
         }
     }
 
+    public List<String> getMultipleRandomMaleNamesWithFixedLastName(String lastname, int numberOfNames){
+        List<String> nameList = new ArrayList<>();
+        for (int i = 0; i < numberOfNames; i++) {
+            nameList.add(getRandomMaleName().trim() + " " + lastname);
+        }
+        return nameList;
+    }
+
+    public List<String> getMultipleRandomFemaleNamesWithFixedLastName(String lastname, int numberOfNames){
+        List<String> nameList = new ArrayList<>();
+        for (int i = 0; i < numberOfNames; i++) {
+            nameList.add(getRandomFemaleName().trim() + " " + lastname);
+        }
+        return nameList;
+    }
+
+
     public List<String> getMultipleRandomNames(int numberOfNames){
         List<String> nameList = new ArrayList<>();
         for (int i = 0; i < numberOfNames; i++) {
@@ -128,6 +145,8 @@ public class NameService {
         }
         return number;
     }
+
+
 
 
 }
