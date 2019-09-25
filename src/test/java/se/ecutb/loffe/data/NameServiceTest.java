@@ -116,7 +116,29 @@ public class NameServiceTest {
 
     }
 
+    @Test
+    public void get_male_name_by_first_letter(){
+        char startsWith = 'V';
+        String expected = "V";
 
+        Assert.assertTrue(testObject.getMaleNameByFirstLetter(startsWith).startsWith(expected));
+    }
+
+    @Test
+    public void get_female_name_by_first_letter(){
+        char startsWith = 'C';
+        String expected = "C";
+
+        Assert.assertTrue(testObject.getFemaleNameByFirstLetter(startsWith).startsWith(expected));
+    }
+
+    @Test
+    public void get_last_name_by_first_letter(){
+        char startsWith = 'V';
+        String expected = "V";
+
+        Assert.assertTrue(testObject.getLastNameByFirstLetter(startsWith).startsWith(expected));
+    }
 
 
 }

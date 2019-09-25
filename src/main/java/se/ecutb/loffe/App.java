@@ -4,15 +4,12 @@ import se.ecutb.loffe.data.NameService;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
         NameService nameService = new NameService();
 
-        System.out.println(nameService.getMultipleRandomMaleNamesWithFixedLastName("Knutsson", 5));
-
-        System.out.println(nameService.getMultipleRandomFemaleNamesWithFixedLastName("Knutsson", 4));
-
-
+        System.out.println(nameService.getMaleNameByFirstLetter('B'));
+        System.out.println(nameService.getFemaleNameByFirstLetter('B'));
+        System.out.println(nameService.getLastNameByFirstLetter('B'));
 
     }
 }

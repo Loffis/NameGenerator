@@ -114,9 +114,45 @@ public class NameService {
             }else {
                 nameList.add(getRandomFemaleName());
             }
+
         }
         return nameList;
     }
+
+    public String getMaleNameByFirstLetter(char firstLetter){
+        List<String> nameList = new ArrayList<>();
+        List<String> newList = new ArrayList<>();
+        for (String name : maleFirstName()){
+            if(name.charAt(0) == firstLetter){
+                nameList.add(name);
+            }
+        }
+        return nameList.get(random(nameList.size()));
+    }
+
+    public String getFemaleNameByFirstLetter(char firstLetter){
+        List<String> nameList = new ArrayList<>();
+        List<String> newList = new ArrayList<>();
+        for (String name : femaleFirstName()){
+            if(name.charAt(0) == firstLetter){
+                nameList.add(name);
+            }
+        }
+        return nameList.get(random(nameList.size()));
+    }
+
+    public String getLastNameByFirstLetter(char firstLetter){
+        List<String> nameList = new ArrayList<>();
+        List<String> newList = new ArrayList<>();
+        for (String name : lastName()){
+            if(name.charAt(0) == firstLetter){
+                nameList.add(name);
+            }
+        }
+        return nameList.get(random(nameList.size()));
+    }
+
+
 
 
 
